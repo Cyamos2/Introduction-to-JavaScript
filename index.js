@@ -17,7 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-
+function votingAge() {
+  var age, voteable;
+  age = document.getElementById("age").nodeValue;
+  voteable = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo").innerHTML = `${voteable} to vote. `
+}
 
 
 /*
@@ -30,6 +35,9 @@ Do the following:
 
    HINT: no function required
 */
+var x = 5;
+var y = 6;
+var z = x + y;
 
 
 
@@ -46,7 +54,13 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+var num1 = 33;
+var num2 = '33';
+if (num1 === num2) {
+  console.log(true);
+} else {
+  console.log(false);
+}
 
 
 /*
@@ -58,9 +72,13 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(x,y){
+    return x,y
   }
+
+const math = multiply(4,5)
+console.log(math)
+
 
 
 
@@ -74,8 +92,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(5,7){
+    return a*b;
 }
 
 
@@ -132,10 +150,41 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-    /*add your code here*/
+function game(user, computer) {
+  computer = Math.random();
+  if (computer < .34) {
+    computer = "rock";
+  } else if (computer <= .67) {
+    computer = "paper";
+  } else {
+    computer = "scissors";
+  }
+
+  if (user === computer) {
+    return "it's a tie"
+  } else if (user === "rock") {
+    if (computer === "scissors") {
+      return "you win!"
+    } else if (computer === "paper") {
+      return "you lose!"
+    }
+
+  else if (user === "paper") {
+    if (computer === "rock")  {
+      return "you win!"
+    } else if (computer === "scissors") {
+      return "you lose!"
+    }
+  }
+  else if (user === "scissors") {
+    if (computer === "paper") {
+      return "you win!"
+    } else if (computer === "rock") {
+      return "you lose!"
+    }
+  }
 }
-  
+console.log(game(user, computer));
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -149,8 +198,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(Miles){
+var kms = 5
+var miles = km/1.609;
+console.log(miles);
   }
 
 
@@ -163,8 +214,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+  var feet = 3
+  var cm = feet/30.48;
+  console.log(cm);
   }
  
 
@@ -179,11 +232,18 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+let bottles = 5;
+function annoyingSong(bottles){
+      while ( bottles >= 1) {
+        console.log((bottles) + " bottles of soda on the wall, " + (bottles) + " bottles of soda, take one down pass it around ");
+        bottles -= 1;
+        console.log(bottles + " bottles of soda on the wall");
+      }
+      if ( bottles <= 0) {
+        console.log('no more!');
+      }
   }
-
-
+console.log(annoyingSong(bottles));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
@@ -199,8 +259,8 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(percentGrade){
+  var percentGrade = (if )
   }
   
   
@@ -220,9 +280,21 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(str1) {
+    str vowel_list = 'aeiouAEIOU'
+    str vcount = '0';
+
+    for (str x = 0; x < str1.length ; x++)
+    {
+      if (vowel_list.index0f(str1[x]) !== -1)
+      {
+        vcount += 1;
+      }
+
+    }
+    return vcount;
 }
+console.log(vowelCounter())
 
 
 
